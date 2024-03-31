@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
 
 function App() {
+  const [clickNum, setClickNum] = useState(0);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +20,12 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => setClickNum(prev => prev+1)}>
+          Click me!
+        </button>
+        <p>
+            {clickNum}
+        </p>
       </header>
     </div>
   );
